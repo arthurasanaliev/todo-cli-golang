@@ -14,11 +14,6 @@ func main() {
 		return
 	}
 
-	fmt.Println("Current To-Do List:")
-	for _, item := range items {
-		fmt.Printf("%d: %s (Done: %v)\n", item.ID, item.Task, item.Done)
-	}
-
 	newItem := todo.NewItem(len(items) + 1)
 	items = append(items, *newItem)
 
